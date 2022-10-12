@@ -1,3 +1,6 @@
 [submodule "katzenpost"]
 	path = katzenpost
 	url = https://github.com/katzenpost/katzenpost
+[submodule "genconfig"]
+	path = genconfig
+	url = https://github.com/katzenpost/genconfig
