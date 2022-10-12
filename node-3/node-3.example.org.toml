@@ -1,0 +1,62 @@
+[Server]
+  Identifier = "node-3.example.org"
+  Addresses = ["127.0.0.1:30011"]
+  DataDir = "/home/user/go/src/github.com/katzenpost/hypothetical-network-config/node-3"
+  IsProvider = false
+
+[Logging]
+  Disable = false
+  File = "katzenpost.log"
+  Level = "DEBUG"
+
+[PKI]
+  [PKI.Voting]
+
+    [[PKI.Voting.Peers]]
+      Addresses = ["127.0.0.1:30001"]
+      IdentityPublicKey = "zsbPxFL2qbpXm5j0pYvOfoeOFav2M0GwSW8hB4Bzjf8="
+      LinkPublicKey = "Ff4ZfZaU1IvSoQEVmVWjDvF6zAqFPyqnqkuJi1WRP34="
+
+    [[PKI.Voting.Peers]]
+      Addresses = ["127.0.0.1:30002"]
+      IdentityPublicKey = "se0Ar8sB6UWlJZCXV+4TN7WxAPxNtPSpXtxdqTS6MLQ="
+      LinkPublicKey = "4hMrN3HG7Zmlmy4vG2H0I956YQmys8B0U4PyaBOMR34="
+
+    [[PKI.Voting.Peers]]
+      Addresses = ["127.0.0.1:30003"]
+      IdentityPublicKey = "GG8KJKrhP3ZO7VhhhuGp9+D79BruYObQyGyx/3GlRmI="
+      LinkPublicKey = "lzjczeHS5uYpc0f59mG3VySGIOCRFI4a7ld9PZvx7jc="
+
+    [[PKI.Voting.Peers]]
+      Addresses = ["127.0.0.1:30004"]
+      IdentityPublicKey = "AOiE/ApCTuWvhr9gGkSNzkI2FYUFIkY/uyYedhzb+9A="
+      LinkPublicKey = "EWrWXPU0HjgbFuqegT2oY5b+JoZ1U9N8isnQ38mieEk="
+
+    [[PKI.Voting.Peers]]
+      Addresses = ["127.0.0.1:30005"]
+      IdentityPublicKey = "t7c63oH9Xa4njiAottXroUGWB4omzuvqAjAjuhHrUdY="
+      LinkPublicKey = "K/Q6fkgQ79UhBtf/4QYqEuvS8EBzoOykq4VkCx9ib1I="
+
+[Management]
+  Enable = false
+  Path = "/home/user/go/src/github.com/katzenpost/hypothetical-network-config/node-3/management_sock"
+
+[Debug]
+  NumSphinxWorkers = 2
+  NumProviderWorkers = 1
+  NumKaetzchenWorkers = 3
+  SchedulerExternalMemoryQueue = false
+  SchedulerQueueSize = 0
+  SchedulerMaxBurst = 16
+  UnwrapDelay = 10
+  ProviderDelay = 500
+  KaetzchenDelay = 750
+  SchedulerSlack = 10
+  SendSlack = 50
+  DecoySlack = 15000
+  ConnectTimeout = 60000
+  HandshakeTimeout = 30000
+  ReauthInterval = 30000
+  SendDecoyTraffic = false
+  DisableRateLimit = false
+  GenerateOnly = false
