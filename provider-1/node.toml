@@ -1,0 +1,91 @@
+[Server]
+  Identifier = "provider-1"
+  Addresses = ["127.0.0.1:30007"]
+  OnlyAdvertiseAltAddresses = false
+  DataDir = "/data"
+  IsProvider = true
+  [Server.AltAddresses]
+    TCP = ["localhost:30007"]
+    torv2 = ["onedaythiswillbea.onion:2323"]
+
+[Logging]
+  Disable = false
+  File = "katzenpost.log"
+  Level = "DEBUG"
+
+[Provider]
+  EnableEphemeralClients = false
+  BinaryRecipients = false
+  CaseSensitiveRecipients = false
+  RecipientDelimiter = ""
+  TrustOnFirstUse = false
+  [Provider.UserDB]
+    Backend = "bolt"
+    [Provider.UserDB.Bolt]
+      UserDB = "/home/user/go/src/github.com/katzenpost/hypothetical-network-config/provider-1/users.db"
+  [Provider.SpoolDB]
+    Backend = "bolt"
+    [Provider.SpoolDB.Bolt]
+      SpoolDB = "/home/user/go/src/github.com/katzenpost/hypothetical-network-config/provider-1/spool.db"
+
+  [[Provider.Kaetzchen]]
+    Capability = "loop"
+    Endpoint = "+loop"
+    Disable = false
+
+  [[Provider.Kaetzchen]]
+    Capability = "keyserver"
+    Endpoint = "+keyserver"
+    Disable = false
+
+[PKI]
+  [PKI.Voting]
+
+    [[PKI.Voting.Peers]]
+      Addresses = ["127.0.0.1:30001"]
+      IdentityPublicKey = "kuk4Sc1qn3a9rdWlxynn/tUMKdPaxmEoxDQE1zb3UnE="
+      LinkPublicKey = "FsMTXuwKvPBFmsGkJbL/3gKGxwHGr74XcvuILXUz3nw="
+
+    [[PKI.Voting.Peers]]
+      Addresses = ["127.0.0.1:30002"]
+      IdentityPublicKey = "J9EJ+sAGjsXWRDfZkMYW0dj4cZwwNjIKae/dMjmJ/3I="
+      LinkPublicKey = "f0dOKc4H+E9rjlAaohEIbD1JaVoS/DqjsXahMdAJeA8="
+
+    [[PKI.Voting.Peers]]
+      Addresses = ["127.0.0.1:30003"]
+      IdentityPublicKey = "bmW7Jz84UUkrjvNwrvNpHtpjgtkCD6OtqUil4TXIaP8="
+      LinkPublicKey = "P+a8ZgMrCnuP4GpMZxn84CGOsEry9aem0rndjMbmbiE="
+
+    [[PKI.Voting.Peers]]
+      Addresses = ["127.0.0.1:30004"]
+      IdentityPublicKey = "dFgsC6tV+fOO8RsWQ/YTp0IUGtNgLF4dFU1daHYF5BM="
+      LinkPublicKey = "Ee2V620CjX441YkuLSO/ms00lGuE91mBs7JcoG/nbVY="
+
+    [[PKI.Voting.Peers]]
+      Addresses = ["127.0.0.1:30005"]
+      IdentityPublicKey = "dFjR45iIO6B6+VIsk+lIu3TZYCmxsXcUi2tK1AXOeXU="
+      LinkPublicKey = "C2zxCX8HLmlZ6X9gyMpdzf/SGMrHApfAnlvmw0jj5ww="
+
+[Management]
+  Enable = true
+  Path = "/home/user/go/src/github.com/katzenpost/hypothetical-network-config/provider-1/management_sock"
+
+[Debug]
+  NumSphinxWorkers = 2
+  NumProviderWorkers = 1
+  NumKaetzchenWorkers = 3
+  SchedulerExternalMemoryQueue = false
+  SchedulerQueueSize = 0
+  SchedulerMaxBurst = 16
+  UnwrapDelay = 10
+  ProviderDelay = 500
+  KaetzchenDelay = 750
+  SchedulerSlack = 10
+  SendSlack = 50
+  DecoySlack = 15000
+  ConnectTimeout = 60000
+  HandshakeTimeout = 30000
+  ReauthInterval = 30000
+  SendDecoyTraffic = false
+  DisableRateLimit = false
+  GenerateOnly = false

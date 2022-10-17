@@ -1,0 +1,79 @@
+[Authority]
+  Identifier = "authority-3"
+  Addresses = ["127.0.0.1:30004"]
+  DataDir = "/data"
+
+[[Authorities]]
+  IdentityPublicKey = "kuk4Sc1qn3a9rdWlxynn/tUMKdPaxmEoxDQE1zb3UnE="
+  LinkPublicKey = "FsMTXuwKvPBFmsGkJbL/3gKGxwHGr74XcvuILXUz3nw="
+  Addresses = ["127.0.0.1:30001"]
+
+[[Authorities]]
+  IdentityPublicKey = "J9EJ+sAGjsXWRDfZkMYW0dj4cZwwNjIKae/dMjmJ/3I="
+  LinkPublicKey = "f0dOKc4H+E9rjlAaohEIbD1JaVoS/DqjsXahMdAJeA8="
+  Addresses = ["127.0.0.1:30002"]
+
+[[Authorities]]
+  IdentityPublicKey = "bmW7Jz84UUkrjvNwrvNpHtpjgtkCD6OtqUil4TXIaP8="
+  LinkPublicKey = "P+a8ZgMrCnuP4GpMZxn84CGOsEry9aem0rndjMbmbiE="
+  Addresses = ["127.0.0.1:30003"]
+
+[[Authorities]]
+  IdentityPublicKey = "dFjR45iIO6B6+VIsk+lIu3TZYCmxsXcUi2tK1AXOeXU="
+  LinkPublicKey = "C2zxCX8HLmlZ6X9gyMpdzf/SGMrHApfAnlvmw0jj5ww="
+  Addresses = ["127.0.0.1:30005"]
+
+[Logging]
+  Disable = false
+  File = "katzenpost.log"
+  Level = "DEBUG"
+
+[Parameters]
+  SendRatePerMinute = 0
+  Mu = 0.0
+  MuMaxDelay = 0
+  LambdaP = 0.0
+  LambdaPMaxDelay = 0
+  LambdaL = 0.0
+  LambdaLMaxDelay = 0
+  LambdaD = 0.0
+  LambdaDMaxDelay = 0
+  LambdaM = 0.0
+  LambdaMMaxDelay = 0
+
+[Debug]
+  Layers = 3
+  MinNodesPerLayer = 1
+  GenerateOnly = false
+
+[[Mixes]]
+  Identifier = ""
+  IdentityKey = "xp1DnqSYJ0hPZCrQceBnnsMpb6aDIcDTJfYi9nRU8O8="
+
+[[Mixes]]
+  Identifier = ""
+  IdentityKey = "yMh/HOYizqANZj5+Tr76tzaVcsgiSxpjjSQzseT7wWM="
+
+[[Mixes]]
+  Identifier = ""
+  IdentityKey = "9jJ9WEtwiU90hHVxrB2qsFZSxRhYGynpNcXdfcna0jY="
+
+[[Mixes]]
+  Identifier = ""
+  IdentityKey = "e+c1wPM50BDBxmI1YYaaEAupdP3tWPbVy19g+iWWpEk="
+
+[[Mixes]]
+  Identifier = ""
+  IdentityKey = "X3klmIQDKc6+kHW5PNz30M/QweX68NeEBgNGOf2oXZU="
+
+[[Mixes]]
+  Identifier = ""
+  IdentityKey = "JkuJWW/Lc8SA1vx+3ninvycRdDmBBzJVqmPrDAWpavc="
+
+[[Providers]]
+  Identifier = "provider-0"
+  IdentityKey = "sOIZEkBUbU3kBITQzXxTIeuN8TbmyXVxeUZkNFocVCI="
+
+[[Providers]]
+  Identifier = "provider-1"
+  IdentityKey = "44GGJSSWIoDF3X4RQ8RweRfUYvTdXyjCfBVxmBD0MMA="
