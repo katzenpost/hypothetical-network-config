@@ -1,0 +1,15 @@
+[Unit]
+Description=Katzenpost Authority
+After=docker.service
+Requires=docker.service
+
+[Service]
+TimeoutStartSec=0
+Restart=always
+ExecStartPre=-/usr/bin/docker exec %n stop
+ExecStart=/usr/bin/docker run --rm --name %n \
+    -v <path to data directory>:/data \
+    katzenpost/server
+
+[Install]
+WantedBy=default.target
